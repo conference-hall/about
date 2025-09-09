@@ -1,14 +1,28 @@
+:root {
+  --animation-duration-slow: 60s;
+  --animation-duration-medium: 80s;
+  --animation-duration-fast: 90s;
+  --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --text-shadow-primary:
+    0 0 8px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(0, 0, 0, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 * {
@@ -18,4 +32,42 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
