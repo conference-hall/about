@@ -14,5 +14,9 @@ npm-debug.log*
 .env
 .env.production
 
+# instructions files
+.claude
+CLAUDE.md
+
 # macOS-specific files
 .DS_Store
