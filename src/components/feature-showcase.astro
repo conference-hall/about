@@ -1,0 +1,292 @@
+---
+const features = [
+  {
+    id: 'submit',
+    title: 'Submit',
+    description:
+      'Speakers submit talk proposals with detailed abstracts, speaker information through an intuitive form interface.',
+    screenshot: '/images/features/submit.png',
+  },
+  {
+    id: 'monitor',
+    title: 'Monitor',
+    description:
+      'Track submissions across multiple events with updates on review progress, acceptances, and rejections.',
+    screenshot: '/images/features/monitor.svg',
+  },
+  {
+    id: 'review',
+    title: 'Review',
+    description:
+      'Organizers collaboratively evaluate proposals with ratings, comments, and team discussions to make informed decisions.',
+    screenshot: '/images/features/review.svg',
+  },
+  {
+    id: 'publish',
+    title: 'Publish',
+    description: 'Send personalized acceptance and rejection emails to speakers automatically.',
+    screenshot: '/images/features/publish.svg',
+  },
+  {
+    id: 'schedule',
+    title: 'Schedule',
+    description:
+      'Build your event program with drag-and-drop scheduling, multiple tracks, and automatic conflict detection.',
+    screenshot: '/images/features/schedule.svg',
+  },
+];
+---
+
+<div class="feature-content">
+  <div class="feature-container">
+    <div class="screenshot-inner">
+      {
+        features.map((feature, index) => (
+          <div class={`screenshot ${index === 0 ? 'active' : ''}`} data-feature={feature.id}>
+            <img src={feature.screenshot} alt={`${feature.title} interface`} loading="lazy" />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="feature-descriptions">
+      {
+        features.map((feature, index) => (
+          <div class={`feature-description ${index === 0 ? 'active' : ''}`} data-feature={feature.id}>
+            <p>{feature.description}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="feature-navigation">
+      {
+        features.map((feature, index) => (
+          <button
+            class={`feature-nav-btn ${index === 0 ? 'active' : ''}`}
+            data-target={feature.id}
+            aria-label={`Show ${feature.title}`}
+          >
+            <div class="nav-btn-content">{feature.title}</div>
+          </button>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll<HTMLButtonElement>('.feature-nav-btn');
+    const screenshots = document.querySelectorAll<HTMLDivElement>('.screenshot');
+    const descriptions = document.querySelectorAll<HTMLDivElement>('.feature-description');
+
+    navButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.target;
+
+        // Remove active class from all buttons, screenshots, and descriptions
+        navButtons.forEach((btn) => btn.classList.remove('active'));
+        screenshots.forEach((screenshot) => screenshot.classList.remove('active'));
+        descriptions.forEach((description) => description.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding elements
+        button.classList.add('active');
+        const targetScreenshot = document.querySelector<HTMLDivElement>(`.screenshot[data-feature="${targetId}"]`);
+        const targetDescription = document.querySelector<HTMLDivElement>(
+          `.feature-description[data-feature="${targetId}"]`,
+        );
+        if (targetScreenshot) {
+          targetScreenshot.classList.add('active');
+        }
+        if (targetDescription) {
+          targetDescription.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .feature-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .feature-container {
+    position: relative;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.1) inset,
+      1px 0 0 0 rgba(255, 255, 255, 0.1) inset,
+      -1px 0 0 0 rgba(255, 255, 255, 0.1) inset;
+    padding: 20px;
+    margin-bottom: 0;
+    animation: slideInUp 1s ease-out 0.6s both;
+    z-index: 20;
+  }
+
+  .screenshot-inner {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .screenshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .screenshot.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .feature-descriptions {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    min-height: 60px;
+  }
+
+  .feature-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+  }
+
+  .feature-description.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .feature-description p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .feature-nav-btn {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s var(--animation-ease);
+    position: relative;
+    flex: 1;
+    min-width: 160px;
+    max-width: 200px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+
+  .feature-nav-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .feature-nav-btn.active {
+    background: var(--btn-primary);
+    box-shadow: 0 4px 12px rgba(55, 48, 163, 0.3);
+  }
+
+  .feature-nav-btn.active:hover {
+    background: var(--btn-primary-hover);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-btn-content {
+    color: white;
+  }
+
+  @media (min-width: 768px) {
+    .feature-container {
+      --maxWidth: calc(100% - 2 * 2rem);
+      max-width: var(--maxWidth);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .feature-container {
+      --maxWidth: 1246px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .feature-content {
+      padding: 0 1rem;
+    }
+
+    .screenshot-inner {
+      aspect-ratio: 4 / 3;
+    }
+
+    .feature-descriptions {
+      margin: 2rem 0;
+    }
+
+    .feature-description p {
+      font-size: 1rem;
+    }
+
+    .feature-navigation {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .feature-nav-btn {
+      min-width: auto;
+      max-width: none;
+      flex: none;
+    }
+  }
+</style>

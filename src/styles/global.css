@@ -1,12 +1,15 @@
 :root {
-  --animation-duration-slow: 60s;
-  --animation-duration-medium: 80s;
-  --animation-duration-fast: 90s;
+  /* Animations */
   --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --text-shadow-primary:
-    0 0 8px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(0, 0, 0, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.4);
+
+  /* Shadows */
+  --text-shadow-primary: 0 0 8px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(0, 0, 0, 0.4);
+
+  /* Solid Button Colors */
+  --btn-primary: #3730a3;
+  --btn-primary-hover: #312e81;
+  --btn-secondary: #231e40;
+  --btn-secondary-hover: #252246;
 }
 
 html {
@@ -36,6 +39,11 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 /* Animations */

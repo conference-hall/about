@@ -8,8 +8,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "upgrade": "npx --yes @astrojs/upgrade",
-    "format": "prettier . --check",
-    "format:fix": "prettier . --write"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

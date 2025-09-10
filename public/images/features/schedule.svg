@@ -1,0 +1,92 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="url(#gradient5)"/>
+  <defs>
+    <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Header -->
+  <rect x="40" y="40" width="720" height="60" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="60" y="75" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="600">Event Schedule Builder</text>
+  
+  <!-- Timeline -->
+  <rect x="60" y="120" width="680" height="320" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)"/>
+  
+  <!-- Day Tabs -->
+  <rect x="80" y="140" width="80" height="30" rx="15" fill="rgba(79,70,229,0.6)" stroke="rgba(79,70,229,0.8)"/>
+  <text x="120" y="158" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Day 1</text>
+  <rect x="170" y="140" width="80" height="30" rx="15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="210" y="158" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Day 2</text>
+  
+  <!-- Time Column -->
+  <rect x="80" y="180" width="60" height="240" rx="4" fill="rgba(255,255,255,0.03)"/>
+  <text x="110" y="200" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">9:00</text>
+  <text x="110" y="230" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">10:00</text>
+  <text x="110" y="260" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">11:00</text>
+  <text x="110" y="290" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">12:00</text>
+  <text x="110" y="320" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">13:00</text>
+  <text x="110" y="350" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">14:00</text>
+  <text x="110" y="380" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">15:00</text>
+  <text x="110" y="410" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">16:00</text>
+  
+  <!-- Main Track -->
+  <rect x="150" y="180" width="200" height="240" rx="4" fill="rgba(255,255,255,0.03)"/>
+  <text x="250" y="195" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Main Auditorium</text>
+  
+  <!-- Opening -->
+  <rect x="160" y="205" width="180" height="20" rx="10" fill="rgba(79,70,229,0.4)" stroke="rgba(79,70,229,0.6)"/>
+  <text x="250" y="217" fill="white" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Opening Keynote</text>
+  
+  <!-- Talk 1 -->
+  <rect x="160" y="235" width="180" height="40" rx="6" fill="rgba(34,197,94,0.3)" stroke="rgba(34,197,94,0.5)"/>
+  <text x="250" y="250" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Modern Web Apps</text>
+  <text x="250" y="265" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Sarah Johnson • 45min</text>
+  
+  <!-- Break -->
+  <rect x="160" y="285" width="180" height="15" rx="7" fill="rgba(245,158,11,0.3)" stroke="rgba(245,158,11,0.5)"/>
+  <text x="250" y="295" fill="rgba(245,158,11,1)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Coffee Break</text>
+  
+  <!-- Talk 2 -->
+  <rect x="160" y="310" width="180" height="40" rx="6" fill="rgba(124,58,237,0.3)" stroke="rgba(124,58,237,0.5)"/>
+  <text x="250" y="325" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="600" text-anchor="middle">GraphQL Patterns</text>
+  <text x="250" y="340" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Alex Chen • 30min</text>
+  
+  <!-- Lunch -->
+  <rect x="160" y="360" width="180" height="25" rx="12" fill="rgba(239,68,68,0.3)" stroke="rgba(239,68,68,0.5)"/>
+  <text x="250" y="375" fill="rgba(239,68,68,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Lunch Break</text>
+  
+  <!-- Talk 3 -->
+  <rect x="160" y="395" width="180" height="20" rx="10" fill="rgba(6,182,212,0.3)" stroke="rgba(6,182,212,0.5)"/>
+  <text x="250" y="407" fill="white" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Panel Discussion</text>
+  
+  <!-- Workshop Track -->
+  <rect x="360" y="180" width="200" height="240" rx="4" fill="rgba(255,255,255,0.03)"/>
+  <text x="460" y="195" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Workshop Room</text>
+  
+  <!-- Workshop 1 -->
+  <rect x="370" y="235" width="180" height="60" rx="6" fill="rgba(79,70,229,0.3)" stroke="rgba(79,70,229,0.5)"/>
+  <text x="460" y="255" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="600" text-anchor="middle">React Deep Dive</text>
+  <text x="460" y="270" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Maria Rodriguez</text>
+  <text x="460" y="285" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">2 hours • 25 seats</text>
+  
+  <!-- Workshop 2 -->
+  <rect x="370" y="355" width="180" height="60" rx="6" fill="rgba(236,72,153,0.3)" stroke="rgba(236,72,153,0.5)"/>
+  <text x="460" y="375" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Node.js Performance</text>
+  <text x="460" y="390" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">David Kim</text>
+  <text x="460" y="405" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">90 min • 30 seats</text>
+  
+  <!-- Floating Actions -->
+  <rect x="580" y="180" width="140" height="120" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="650" y="200" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Quick Actions</text>
+  
+  <rect x="590" y="210" width="120" height="25" rx="12" fill="rgba(34,197,94,0.3)" stroke="rgba(34,197,94,0.5)"/>
+  <text x="650" y="225" fill="rgba(34,197,94,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Add Break</text>
+  
+  <rect x="590" y="245" width="120" height="25" rx="12" fill="rgba(79,70,229,0.3)" stroke="rgba(79,70,229,0.5)"/>
+  <text x="650" y="260" fill="rgba(79,70,229,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Schedule Talk</text>
+  
+  <rect x="590" y="280" width="120" height="25" rx="12" fill="rgba(245,158,11,0.3)" stroke="rgba(245,158,11,0.5)"/>
+  <text x="650" y="295" fill="rgba(245,158,11,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Export PDF</text>
+</svg>

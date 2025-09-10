@@ -1,0 +1,55 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="url(#gradient2)"/>
+  <defs>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Header -->
+  <rect x="40" y="40" width="720" height="60" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+  <text x="60" y="75" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="600">Speaker Dashboard</text>
+  
+  <!-- Stats Cards -->
+  <rect x="60" y="120" width="160" height="80" rx="8" fill="rgba(79,70,229,0.2)" stroke="rgba(79,70,229,0.4)"/>
+  <text x="80" y="140" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12">Total Submissions</text>
+  <text x="80" y="180" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="700">12</text>
+  
+  <rect x="240" y="120" width="160" height="80" rx="8" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.4)"/>
+  <text x="260" y="140" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12">Under Review</text>
+  <text x="260" y="180" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="700">7</text>
+  
+  <rect x="420" y="120" width="160" height="80" rx="8" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)"/>
+  <text x="440" y="140" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12">Accepted</text>
+  <text x="440" y="180" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="700">3</text>
+  
+  <rect x="600" y="120" width="160" height="80" rx="8" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.4)"/>
+  <text x="620" y="140" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12">Declined</text>
+  <text x="620" y="180" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="700">2</text>
+  
+  <!-- Submissions List -->
+  <rect x="60" y="220" width="680" height="240" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)"/>
+  <text x="80" y="245" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="600">Recent Submissions</text>
+  
+  <!-- List Item 1 -->
+  <rect x="80" y="260" width="640" height="50" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="100" y="280" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="500">Building Modern Web Applications</text>
+  <text x="100" y="295" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="12">JS Conference 2024 • Submitted 2 days ago</text>
+  <rect x="650" y="270" width="60" height="20" rx="10" fill="rgba(34,197,94,0.3)" stroke="rgba(34,197,94,0.5)"/>
+  <text x="680" y="282" fill="rgba(34,197,94,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">ACCEPTED</text>
+  
+  <!-- List Item 2 -->
+  <rect x="80" y="320" width="640" height="50" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="100" y="340" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="500">Advanced React Patterns</text>
+  <text x="100" y="355" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="12">React Summit • Submitted 5 days ago</text>
+  <rect x="650" y="330" width="60" height="20" rx="10" fill="rgba(124,58,237,0.3)" stroke="rgba(124,58,237,0.5)"/>
+  <text x="680" y="342" fill="rgba(124,58,237,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">REVIEWING</text>
+  
+  <!-- List Item 3 -->
+  <rect x="80" y="380" width="640" height="50" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="100" y="400" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="500">GraphQL Best Practices</text>
+  <text x="100" y="415" fill="rgba(255,255,255,0.6)" font-family="Arial, sans-serif" font-size="12">DevCon Europe • Submitted 1 week ago</text>
+  <rect x="650" y="390" width="60" height="20" rx="10" fill="rgba(245,158,11,0.3)" stroke="rgba(245,158,11,0.5)"/>
+  <text x="680" y="402" fill="rgba(245,158,11,1)" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">PENDING</text>
+</svg>
