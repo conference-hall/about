@@ -77,23 +77,28 @@ const features = [
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const navButtons = document.querySelectorAll<HTMLButtonElement>('.feature-nav-btn');
-    const screenshots = document.querySelectorAll<HTMLDivElement>('.screenshot');
-    const descriptions = document.querySelectorAll<HTMLDivElement>('.feature-description');
+    const featureShowcase = document.querySelector('.feature-content');
+    if (!featureShowcase) return;
+
+    const navButtons = featureShowcase.querySelectorAll<HTMLButtonElement>('.feature-nav-btn');
+    const screenshots = featureShowcase.querySelectorAll<HTMLDivElement>('.screenshot');
+    const descriptions = featureShowcase.querySelectorAll<HTMLDivElement>('.feature-description');
 
     navButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const targetId = button.dataset.target;
 
-        // Remove active class from all buttons, screenshots, and descriptions
+        // Remove active class from all buttons, screenshots, and descriptions within feature showcase only
         navButtons.forEach((btn) => btn.classList.remove('active'));
         screenshots.forEach((screenshot) => screenshot.classList.remove('active'));
         descriptions.forEach((description) => description.classList.remove('active'));
 
         // Add active class to clicked button and corresponding elements
         button.classList.add('active');
-        const targetScreenshot = document.querySelector<HTMLDivElement>(`.screenshot[data-feature="${targetId}"]`);
-        const targetDescription = document.querySelector<HTMLDivElement>(
+        const targetScreenshot = featureShowcase.querySelector<HTMLDivElement>(
+          `.screenshot[data-feature="${targetId}"]`,
+        );
+        const targetDescription = featureShowcase.querySelector<HTMLDivElement>(
           `.feature-description[data-feature="${targetId}"]`,
         );
         if (targetScreenshot) {
@@ -207,6 +212,7 @@ const features = [
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2rem;
+    margin-bottom: 1em;
   }
 
   .feature-nav-btn {

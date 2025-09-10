@@ -1,0 +1,252 @@
+---
+const organizerFeatures = [
+  {
+    id: 'create-event',
+    title: 'Create conferences and meetups',
+    description:
+      'Set up your event with custom branding, configure call for papers dates, and choose between public or private visibility.',
+    screenshot: '/images/features/submit.png',
+  },
+  {
+    id: 'team-collaboration',
+    title: 'Share events with your team',
+    description:
+      'Use teams to collaborate with multiple organizers on the same event. Manage permissions and roles for seamless teamwork.',
+    screenshot: '/images/features/review.svg',
+  },
+  {
+    id: 'custom-formats',
+    title: 'Custom formats and surveys',
+    description:
+      'Define your own talk formats, categories, and create custom surveys for speakers to gather exactly the information you need.',
+    screenshot: '/images/features/monitor.svg',
+  },
+  {
+    id: 'cfp-automation',
+    title: 'Automated call for papers',
+    description:
+      'Set opening and closing dates for your call for papers. The system automatically manages when CFPs open or close.',
+    screenshot: '/images/features/schedule.svg',
+  },
+  {
+    id: 'custom-emails',
+    title: 'Custom email templates',
+    description:
+      'Create personalized email templates for different communication needs. Customize messages for acceptances, rejections, and updates.',
+    screenshot: '/images/features/publish.svg',
+  },
+  {
+    id: 'integrations',
+    title: 'Integrations',
+    description:
+      'Connect with Slack for real-time notifications, use the Web API for custom integrations, and export proposals to your preferred tools.',
+    screenshot: '/images/features/monitor.svg',
+  },
+];
+---
+
+<section class="organizer-features">
+  <div class="container">
+    <div class="features-layout">
+      <div class="features-list">
+        {
+          organizerFeatures.map((feature, index) => (
+            <details class="feature-item" open={index === 0} name="features" data-feature={feature.id}>
+              <summary class="feature-header">
+                <h3>{feature.title}</h3>
+              </summary>
+              <p>{feature.description}</p>
+            </details>
+          ))
+        }
+      </div>
+
+      <div class="vertical-border"></div>
+
+      <!-- Right side: Feature content panel -->
+      <div class="feature-panel">
+        {
+          organizerFeatures.map((feature) => (
+            <div class="panel-content" data-feature={feature.id}>
+              <img src={feature.screenshot} alt={`${feature.title} interface`} class="feature-screenshot" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .organizer-features {
+    padding: 0rem 2rem;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 3rem;
+  }
+
+  .features-layout {
+    display: grid;
+    grid-template-columns: 3fr 1px 5fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 6rem 0;
+  }
+
+  .feature-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover {
+    border-color: rgba(55, 48, 163, 0.5);
+  }
+
+  .feature-item[open] {
+    border-color: var(--btn-primary);
+    background: rgba(55, 48, 163, 0.1);
+  }
+
+  .feature-header {
+    padding: 1.5rem;
+    color: white;
+    cursor: pointer;
+    list-style: none;
+    transition: all 0.3s ease;
+  }
+
+  .feature-header:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .feature-header::-webkit-details-marker {
+    display: none;
+  }
+
+  .feature-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .feature-item p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .vertical-border {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    min-height: 100%;
+    justify-self: center;
+  }
+
+  .feature-panel {
+    position: relative;
+    height: 100%;
+    padding: 6rem 0;
+    overflow: visible;
+  }
+
+  .panel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 6rem 0;
+    overflow: visible;
+  }
+
+  /* Dynamic panel visibility using nth-child approach */
+  .features-layout:has(.features-list .feature-item:nth-child(1)[open]) .feature-panel .panel-content:nth-child(1),
+  .features-layout:has(.features-list .feature-item:nth-child(2)[open]) .feature-panel .panel-content:nth-child(2),
+  .features-layout:has(.features-list .feature-item:nth-child(3)[open]) .feature-panel .panel-content:nth-child(3),
+  .features-layout:has(.features-list .feature-item:nth-child(4)[open]) .feature-panel .panel-content:nth-child(4),
+  .features-layout:has(.features-list .feature-item:nth-child(5)[open]) .feature-panel .panel-content:nth-child(5),
+  .features-layout:has(.features-list .feature-item:nth-child(6)[open]) .feature-panel .panel-content:nth-child(6) {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .feature-screenshot {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    min-width: 100%;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .organizer-features {
+      padding: 6rem 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .features-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .vertical-border {
+      display: none;
+    }
+
+    .feature-panel {
+      order: -1;
+      padding: 4rem 0;
+      min-height: 300px;
+    }
+
+    .panel-content {
+      padding: 4rem 0;
+    }
+
+    .feature-header {
+      padding: 1.25rem;
+    }
+
+    .feature-header h3 {
+      font-size: 1rem;
+    }
+
+    .feature-item p {
+      padding: 0 1.25rem 1.25rem 1.25rem;
+    }
+  }
+</style>
